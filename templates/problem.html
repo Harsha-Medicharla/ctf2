@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherlock's Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+        }
+        .page-break {
+            padding-top: 300%;
+        }
+        .message {
+            background-color: #ffeaa7;
+            color: #e67e22;
+            padding: 15px;
+            border: 1px solid #e67e22;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .hidden {
+            display: none;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 4px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Sherlock’s Journey</h1>
+        <p>On a stormy night in London, Sherlock Holmes decided to take a long and grueling journey to solve a mysterious case that had been troubling Scotland Yard. Each day, he would walk a certain number of miles in a specific pattern to clear his mind and gather clues.</p>
+
+        <p>On the first day, Sherlock would walk <b>a</b> miles, on the second day, he would walk <b>b</b> miles, and on the third day, he would walk <b>c</b> miles. From there on, his walking pattern would repeat, with Sherlock walking <b>a</b> miles on the fourth day, <b>b</b> miles on the fifth, <b>c</b> miles on the sixth, and so on.</p>
+
+        <p>Sherlock will complete his journey when he has walked at least <b>n</b> miles in total. Your task is to determine the exact day on which Sherlock will complete his journey.</p>
+
+        <h2>Problem Description</h2>
+        <p>You are given four integers <b>n</b>, <b>a</b>, <b>b</b>, and <b>c</b>:</p>
+        <ul>
+            <li><b>n</b> is the total distance Sherlock wants to cover in kilometers.</li>
+            <li><b>a</b>, <b>b</b>, and <b>c</b> represent the number of miles Sherlock walks on the first, second, and third days respectively.</li>
+        </ul>
+        <p>Your task is to determine the exact day Sherlock will have walked at least <b>n</b> kilometers in total, completing his journey.</p>
+
+        <h2>Input</h2>
+        <p>The first line contains one integer <b>t</b> (<b>1 ≤ t ≤ 1000</b>) — the number of test cases.</p>
+        <p>For each test case:</p>
+        <ul>
+            <li>The first line contains an integer <b>n</b> (<b>1 ≤ n ≤ 10⁹</b>) — the total distance Sherlock wants to walk.</li>
+            <li>The second line contains three integers <b>a</b>, <b>b</b>, and <b>c</b> (<b>1 ≤ a, b, c ≤ 10⁶</b>) — the distances Sherlock walks on the first, second, and third days, respectively.</li>
+        </ul>
+
+    <h3>Output</h3>
+    <p>For each test case, output one integer — the day on which Sherlock will have walked at least <b>n</b> kilometers in total, completing his journey.</p>
+
+    <h3>Test Case </h3>
+    <pre>
+    Input:
+    4
+    12 1 5 3
+    6 6 7 4
+    16 3 4 1
+
+    Output:
+    5
+    1
+    6
+    </pre>
+
+    <h3>Explanation</h3>
+    <ul>
+        <li>Test Case 1: Over the first four days, Sherlock walks 1+5+3+1 = 10 kilometers. On the fifth day, he walks another 5 kilometers, making his total distance 15 kilometers. Since 12 kilometers are needed, Sherlock will complete his journey on the fifth day.</li>
+        <li>Test Case 2: In the second test case, Sherlock will walk 6 kilometers on the first day, which is exactly n=6, completing the journey on the first day.</li>
+        <li>Test Case 3: Sherlock will walk 3+4+1=8 kilometers in the first cycle. Then the next 8 kilometers after repeating the cycle completes on the 6th day, with the total 16 kilometers.</li>
+    </ul>
+        <h3>Question Input</h3>
+        <pre>
+        Input:
+        1
+        10000000000 998799 899998 9991297
+        </pre>
+
+        <form method="POST">
+            <label for="answer">Your answer :</label>
+            <input type="text" name="answer" placeholder="Your answer" required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+</body>
+</html>
