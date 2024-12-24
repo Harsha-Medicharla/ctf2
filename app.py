@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Define the correct answers and keys
 correct_answer = 2524  # The correct answer for the problem page
-otp_secret_key = "sherlock1729"  # Key for generating OTP
+otp_secret_key = "sherlock2524"  # Key for generating OTP
 otp_secret = base64.b32encode(otp_secret_key.encode('utf-8')).decode('utf-8')
 
 
